@@ -6,6 +6,7 @@ import 'package:block/state_inherited_shopping_cart/shopping_cart.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
+  // List To give me a number of different products and prices
   List<Product> items = List.generate(100, (index) {
     return Product(
       name: "Product $index",
@@ -32,12 +33,12 @@ class Home extends StatelessWidget {
                     ),
                   ),
                   badgeStyle: const badges.BadgeStyle(
-                    badgeColor: const Color.fromARGB(255, 247, 187, 187),
+                    badgeColor: Color.fromARGB(255, 247, 187, 187),
                   ),
                   child: IconButton(
                       onPressed: () {
                         Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => CartDetails(),
+                          builder: (context) => const CartDetails(),
                         ));
                       },
                       icon: const Icon(Icons.shopping_cart)),
@@ -50,16 +51,20 @@ class Home extends StatelessWidget {
               itemBuilder: (context, index) {
                 return Card(
                   color: const Color.fromARGB(255, 247, 187, 187),
-                  margin: EdgeInsets.all(10),
+                  margin: const EdgeInsets.all(10),
                   child: ListTile(
                     title: Row(
                       children: [
+                        // product name
                         Expanded(child: Text(items[index].name)),
                         Checkbox(
                           value: items[index].isCheck,
+
+                          /// * Checkbox
                           onChanged: (value) {
                             setState(
                               () {
+                                /// I make a check so that the code is heard when I come to choose the number of the product
                                 items[index].isCheck = !items[index].isCheck;
                                 if (items[index].isCheck) {
                                   cart.product.add(items[index]);
@@ -72,6 +77,7 @@ class Home extends StatelessWidget {
                         ),
                       ],
                     ),
+                    // Product price
                     subtitle: Text("${items[index].price} EGP "),
                   ),
                 );
