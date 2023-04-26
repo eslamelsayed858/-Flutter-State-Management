@@ -1,4 +1,4 @@
-import 'package:block/state_inherited_widget_counter/counter_provider.dart';
+import 'package:bloc/state_inherited_widget_counter/counter_provider.dart';
 import 'package:flutter/material.dart';
 
 class HomeAppCounter extends StatelessWidget {

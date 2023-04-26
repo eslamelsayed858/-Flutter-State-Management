@@ -1,6 +1,6 @@
-import 'package:block/state_inherited_shopping_cart/shopping_cart.dart';
+import 'package:bloc/state_inherited_shopping_cart/shopping_cart.dart';
 import 'package:flutter/material.dart';
-import 'state_inherited_shopping_cart/inherited_shopping_cart.dart';
+import 'state_bloc_pattern_counter/scren_app.dart';
 
 void main() => runApp(const MyApp());
 
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return ShoppingCart(
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: Home(),
+        home: ScrenApp(),
       ),
     );
   }

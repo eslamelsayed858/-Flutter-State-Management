@@ -1,4 +1,4 @@
-import 'package:block/state_inherited_shopping_cart/class_product.dart';
+import 'package:bloc/state_inherited_shopping_cart/class_product.dart';
 import 'package:flutter/material.dart';
 import 'package:collection/collection.dart';
 

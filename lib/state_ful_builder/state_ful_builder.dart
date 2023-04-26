@@ -41,9 +41,9 @@ class Home extends StatelessWidget {
                 size: 50,
               ),
             ),
-            Text(
+            const Text(
               "My is \$conunter", //
-              style: const TextStyle(fontSize: 33),
+              style: TextStyle(fontSize: 33),
             ),
             IconButton(
               onPressed: () {
