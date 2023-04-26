@@ -1,3 +1,4 @@
+/// Properties ShoppingCart
 class Product {
   String name;
   bool isCheck;

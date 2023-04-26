@@ -1,6 +1,7 @@
 import 'package:block/state_inherited_shopping_cart/shopping_cart.dart';
 import 'package:flutter/material.dart';
 
+/// Another page because if I have products to listen to
 class CartDetails extends StatelessWidget {
   const CartDetails({super.key});
 
