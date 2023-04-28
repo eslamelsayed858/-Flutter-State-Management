@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:state/state_bl_pattern_counter/counter_bloc.dart';
+import 'package:state/state_bl_pattern_counter/counter_event.dart';
 
 class ScrenApp extends StatelessWidget {
   const ScrenApp({super.key});
 
   @override
   Widget build(BuildContext context) {
+    CounterBloc cb = BlocProvider.of<CounterBloc>(context);
+
     return Scaffold(
       appBar: AppBar(
         title: const Text("block"),
@@ -14,12 +19,20 @@ class ScrenApp extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                cb.add(CounterEvent.add);
+              },
               icon: const Icon(Icons.add),
             ),
-            const Text("0"),
+            BlocBuilder<CounterBloc, int>(
+              builder: (context, state) {
+                return Text("$state");
+              },
+            ),
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                cb.add(CounterEvent.remove);
+              },
               icon: const Icon(Icons.remove),
             ),
           ],

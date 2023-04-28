@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:state/state_bl_pattern_counter/counter_bloc.dart';
 import 'state_bl_pattern_counter/scren_app.dart';
 
 void main() => runApp(const MyApp());
@@ -8,9 +10,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ScrenApp(),
+      home: BlocProvider<CounterBloc>(
+        create: (context) => CounterBloc(0),
+        child: const ScrenApp(),
+      ),
     );
   }
 }
