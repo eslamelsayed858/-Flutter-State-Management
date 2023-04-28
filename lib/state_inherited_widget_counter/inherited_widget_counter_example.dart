@@ -1,5 +1,5 @@
-import 'package:bloc/state_inherited_widget_counter/counter_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:state/state_inherited_widget_counter/counter_provider.dart';
 
 class HomeAppCounter extends StatelessWidget {
   HomeAppCounter({super.key});

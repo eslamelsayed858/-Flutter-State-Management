@@ -1,9 +1,10 @@
 import 'dart:math';
 import 'package:badges/badges.dart' as badges;
-import 'package:bloc/state_inherited_shopping_cart/cart_details.dart';
-import 'package:bloc/state_inherited_shopping_cart/class_product.dart';
-import 'package:bloc/state_inherited_shopping_cart/shopping_cart.dart';
+
 import 'package:flutter/material.dart';
+import 'package:state/state_inherited_shopping_cart/cart_details.dart';
+import 'package:state/state_inherited_shopping_cart/class_product.dart';
+import 'package:state/state_inherited_shopping_cart/shopping_cart.dart';
 
 class Home extends StatelessWidget {
   // List To give me a number of different products and prices

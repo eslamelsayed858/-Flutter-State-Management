@@ -1,6 +1,6 @@
-import 'package:bloc/state_inherited_shopping_cart/class_product.dart';
 import 'package:flutter/material.dart';
 import 'package:collection/collection.dart';
+import 'package:state/state_inherited_shopping_cart/class_product.dart';
 
 /// If you want the data to point anywhere
 class ShoppingCart extends InheritedWidget {

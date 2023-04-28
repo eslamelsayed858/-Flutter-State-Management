@@ -1,5 +1,5 @@
-import 'package:bloc/state_inherited_shopping_cart/shopping_cart.dart';
 import 'package:flutter/material.dart';
+import 'package:state/state_inherited_shopping_cart/shopping_cart.dart';
 
 /// Another page because if I have products to listen to
 class CartDetails extends StatelessWidget {
